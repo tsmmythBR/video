@@ -25,10 +25,10 @@ async def on_message(message):
         em.set_image(url='https://discordapp.com/assets/ba74954dde74ff40a32ff58069e78c36.png')
         await client.send_message(message.channel, embed=em)
     if message.content.startswith('!yesno'):
-        randomlist = ['Yes','No'']
+        randomlist = ['Yes','No']
         await client.send_message(message.channel,(random.choice(randomlist)))
     if message.content.startswith('!coinflip'):
-        randomlist = ['head','coin'']
+        randomlist = ['head','coin']
         await client.send_message(message.channel,(random.choice(randomlist)))
     if message.content.startswith('!friend'):
         randomlist = ['10%','20%','30%','40%','50%','60%','70%','80%','90%','100%']
