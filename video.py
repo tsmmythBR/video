@@ -73,5 +73,7 @@ async def on_message(message):
     if ('ever1 storm') in message.content:
        await client.delete_message(message)  
     if ('ever1 yan') in message.content:
-       await client.delete_message(message)  
+       await client.delete_message(message)
+    if message.content == 'versie':
+        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.32')
 client.run('NTM5NTA1NDgwMTk2OTQ3OTg4.DzDVoQ.5qLPGFkyNJQb4mJSqz-TEAy1h_0')
