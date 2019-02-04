@@ -65,4 +65,6 @@ async def on_message(message):
     if message.content == 'ever1 matt':
         await client.send_message(message.channel,'@Matthijs0409ツ
 #7418')
+    if ('ever1 matt') in message.content:
+       await client.delete_message(message)                               
 client.run('NTM5NTA1NDgwMTk2OTQ3OTg4.DzDVoQ.5qLPGFkyNJQb4mJSqz-TEAy1h_0')
