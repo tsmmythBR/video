@@ -14,7 +14,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='SnorWare V0.31', type = 2))
+    await client.change_presence(game=Game(name='SnorWare V0.32', type = 2))
     print('snorbot is ready :)')
 
 
