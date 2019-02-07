@@ -88,6 +88,10 @@ async def on_message(message):
         await client.send_message(message.channel,'let op je taal!')
     if message.content == 'PING':
         await client.send_message(message.channel,'let op je taal!')
+    if message.content == 'kanker':
+        await client.send_message(message.channel,'let op je taal!')
+    if message.content == 'KANKER
+        await client.send_message(message.channel,'let op je taal!')
     if ('wtf') in message.content:
        await client.delete_message(message)
     if ('gast') in message.content:
@@ -97,5 +101,7 @@ async def on_message(message):
     if ('ping') in message.content:
        await client.delete_message(message)
     if ('PING') in message.content:
+       await client.delete_message(message)
+    if ('Kanker') in message.content:
        await client.delete_message(message)
 client.run('NTM5NTA1NDgwMTk2OTQ3OTg4.DzDVoQ.5qLPGFkyNJQb4mJSqz-TEAy1h_0')
