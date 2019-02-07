@@ -14,7 +14,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='SnorWare V0.32', type = 2))
+    await client.change_presence(game=Game(name='SnorWare V0.4-BETA', type = 2))
     print('snorbot is ready :)')
 
 
@@ -75,7 +75,27 @@ async def on_message(message):
     if ('ever1 yan') in message.content:
        await client.delete_message(message)
     if message.content == 'versie':
-        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.32')
-    if message.content == '.warn':
+        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.4-BETA')
+    if message.content == 'warn':
         await client.send_message(message.channel,'Alright, Succesfully warned!')
+    if message.content == 'wtf':
+        await client.send_message(message.channel,'let op je taal!')
+    if message.content == 'gast':
+        await client.send_message(message.channel,'let op je taal!')
+    if message.content == 'gozer':
+        await client.send_message(message.channel,'let op je taal!')
+    if message.content == 'ping':
+        await client.send_message(message.channel,'let op je taal!')
+    if message.content == 'PING':
+        await client.send_message(message.channel,'let op je taal!')
+    if ('wtf') in message.content:
+       await client.delete_message(message)
+    if ('gast') in message.content:
+       await client.delete_message(message)
+    if ('gozer') in message.content:
+       await client.delete_message(message)
+    if ('ping') in message.content:
+       await client.delete_message(message)
+    if ('PING') in message.content:
+       await client.delete_message(message)
 client.run('NTM5NTA1NDgwMTk2OTQ3OTg4.DzDVoQ.5qLPGFkyNJQb4mJSqz-TEAy1h_0')
