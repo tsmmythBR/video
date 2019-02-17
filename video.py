@@ -14,7 +14,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='SnorWare V0.4.1-BETA', type = 2))
+    await client.change_presence(game=Game(name='SnorWare V0.4.2-BETA', type = 2))
     print('snorbot is ready :)')
 
 
@@ -75,7 +75,7 @@ async def on_message(message):
     if ('ever1 yan') in message.content:
        await client.delete_message(message)
     if message.content == 'versie':
-        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.4-BETA')
+        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.4.2-BETA')
     if message.content == 'wtf':
         await client.send_message(message.channel,'let op je taal!')
     if message.content == 'KKR':
