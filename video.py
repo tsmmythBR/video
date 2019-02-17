@@ -76,8 +76,6 @@ async def on_message(message):
        await client.delete_message(message)
     if message.content == 'versie':
         await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.4-BETA')
-    if ('warn') in message.content:
-        await client.send_message(message.channel,'Alright, Succesfully warned!')
     if message.content == 'wtf':
         await client.send_message(message.channel,'let op je taal!')
     if message.content == 'KKR':
@@ -106,4 +104,7 @@ async def on_message(message):
        await client.delete_message(message)
     if ('KANKER') in message.content:
        await client.delete_message(message)
+    if ('warn') in message.content:
+        await client.send_message(message.channel,'Alright, Succesfully warned!')
+        end
 client.run('NTM5NTA1NDgwMTk2OTQ3OTg4.DzDVoQ.5qLPGFkyNJQb4mJSqz-TEAy1h_0')
