@@ -20,7 +20,7 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-    if(message.channel.id == "491228753268310018"):
+    if(message.channel.id == "491253757141581825"):
         await client.add_reaction(message, ":Safe:546989214932140032")
     if message.content == 'help':
         em = discord.Embed(description='Commands: !yesno, !coinflip, !friend, !8ball, ever1')
