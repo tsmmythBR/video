@@ -119,13 +119,11 @@ async def on_message(message):
        await client.delete_message(message)
     if ('KANKER') in message.content:
        await client.delete_message(message)
-    elif messsage.content.startswith("say"):
-        variable = message.content[len('say'):].strip()
-        if variable == "@everyone":
-            await client.send_message(message.channel, "lol, ga niet everyone doen. :ban"
-        elif variable == "@here":
-            await client.send_message(message.channel, "lol, ga niet here doen :kick"
-       else:
-           await client.send_message (message.channel, variable)
+    if message.content.upper().startswith('say'):
+        if message.author.id == "457852154724483083":
+            args = message.contect.split(" ")
+            await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
+        else:
+            await client.send_message(message.channel, "Geen toegang.")
 client.loop.create_task(change_status())
 client.run('NTM5NTA1NDgwMTk2OTQ3OTg4.DzDVoQ.5qLPGFkyNJQb4mJSqz-TEAy1h_0')
