@@ -124,6 +124,6 @@ async def on_message(message):
             args = message.content.split(" ")
             await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
         else:
-            await client.send_message(message.channel, "Rozen zijn rood, Matthijs is een schaap (vreemd wezen) jij hebt geen toegang tot dit command.")
+            await client.send_message(message.channel, "Rozen zijn rood, Matthijs is een schaap (vreemd wezen) jij hebt geen toegang tot dit command. (vraag toegang aan demanmetsnor112)")
 client.loop.create_task(change_status())
 client.run('NTM5NTA1NDgwMTk2OTQ3OTg4.DzDVoQ.5qLPGFkyNJQb4mJSqz-TEAy1h_0')
