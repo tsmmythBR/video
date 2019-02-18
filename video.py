@@ -121,7 +121,7 @@ async def on_message(message):
        await client.delete_message(message)
     if message.content.upper().startswith('!SAY'):
         if message.author.id == "457852154724483083":
-            args = message.contect.split(" ")
+            args = message.content.split(" ")
             await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
         else:
             await client.send_message(message.channel, "Geen toegang.")
