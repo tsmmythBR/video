@@ -5,11 +5,22 @@ import asyncio
 import time
 import random
 from discord import Game
+from itertools import cycle
 
 
 Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
+status = ['SnorWare V0.4.2-BETA', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Command of the day= !yesno', 'Inviten? Stuur Peter R. de Vries#2938 een dm!']
+
+async def change_status():
+    await client.wait_until_ready()
+    msgs = cycle(status)
+    
+    while not client.is_closed:
+        current_status = next(msgs)
+        await client.change_presence(game=discord.Game(name=current_status))
+        await asyncio.sleep(1)
 
 
 @client.event
@@ -108,4 +119,5 @@ async def on_message(message):
        await client.delete_message(message)
     if ('KANKER') in message.content:
        await client.delete_message(message)
+client.loop.create_task(change_status())
 client.run('NTM5NTA1NDgwMTk2OTQ3OTg4.DzDVoQ.5qLPGFkyNJQb4mJSqz-TEAy1h_0')
