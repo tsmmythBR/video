@@ -20,6 +20,8 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    if message.content.startswith('warn'):
+        await client.send_message(message.channel,'Alright, Succesfully warned!')
     if(message.channel.id == "491253757141581825"):
         await client.add_reaction(message, ":Safe:546989214932140032")
     if message.content == 'help':
