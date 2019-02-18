@@ -11,7 +11,7 @@ from itertools import cycle
 Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
-status = ['SnorWare V0.4', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 11:42 18-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'checking for updates..', 'No update found.']
+status = ['SnorWare V0.4', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 12:06 18-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'checking for updates..', 'No update found.']
 
 async def change_status():
     await client.wait_until_ready()
