@@ -11,7 +11,7 @@ from itertools import cycle
 Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
-status = ['SnorWare V0.5', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 12:35 18-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'checking for updates..', 'No update found.']
+status = ['SnorWare V0.6', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 14:47 18-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'checking for updates..', 'No update found.']
 
 async def change_status():
     await client.wait_until_ready()
@@ -58,11 +58,13 @@ async def on_message(message):
     if(message.channel.id == "491253757141581825"):
         await client.add_reaction(message, ":Safe:546989214932140032")
     if message.content == 'help':
-        em = discord.Embed(description='Commands: !yesno, !coinflip, !friend, !8ball, ever1')
+        em = discord.Embed(description='Commands: !fnloc !yesno, !coinflip, !friend, !8ball, !wiet')
         em.set_image(url='https://discordapp.com/assets/ba74954dde74ff40a32ff58069e78c36.png')
         await client.send_message(message.channel, embed=em)
     if message.content.startswith('!yesno'):
         randomlist = ['Yes','No']
+    if message.content.startswith('!fnloc'):
+        randomlist = ['Junk Junction','Lazy links','the block','haunted hills','pleasant park','loot lake','tomato temple','wailing woods','snobby shores','tilted towers','dusty divot','retail row','lonely lodge','shifty shafts','salty springs','frosty','polar','fatal fields','paradise palms','happy hamlet','lucky landing']
         await client.send_message(message.channel,(random.choice(randomlist)))
     if message.content.startswith('!coinflip'):
         randomlist = ['head','coin']
@@ -112,7 +114,7 @@ async def on_message(message):
     if ('ever1 yan') in message.content:
        await client.delete_message(message)
     if message.content == 'v':
-        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.5')
+        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.6')
     if message.content == 'wtf':
         await client.send_message(message.channel,'let op je taal!')
     if message.content == 'KKR':
