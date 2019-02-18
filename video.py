@@ -27,10 +27,32 @@ async def change_status():
 async def on_ready():
     await client.change_presence(game=Game(name='SnorWare V0.5', type = 2))
     print('snorbot is ready :)')
-
+    
+@client.event
+async def on_member_join(member):
+    await client.send_message(member, "Welkom bij VDV! Heb een leuke tijd en vergeet zeker niet om een command zoals !yesno te proberen of natuurlijk 'help' fijne dag!")
+    await client.send_message(member, "-------------------------------------------------------------------")
+    await client.send_message(member, "Ik ben gemaakt door Peter R de vries (voor als je ook een bot wilt)")
+    await client.send_message(member, "Je kan Peter R de vries ook inhuren als developer! (roblox)")
+    await client.send_message(member, "-------------------------------------------------------------------")
+    await client.send_message(member, "Je kan altijd een applicatie doen met -new (in bot commmands)")
+    await client.send_message(member, "-------------------------------------------------------------------")
+    await client.send_message(member, "Question: Mag ik een developer zoals peter r de vries een bericht zenden? A: Ja tuurlijk! (Peter reageert redelijk snel)")
+    await client.send_message(member, "-------------------------------------------------------------------")
+    await client.send_message(member, "Question: Waarom krijg ik dit bericht? A: Ugh, Ga hersenen kweken ofzo -_-")
+    await client.send_message(member, "-------------------------------------------------------------------")
+    await client.send_message(member, "Question: Mag ik wiet roken in jullie server? A: (!wiet) Ja tuurlijk!! (samen met peter R. de vries xD)")
+    await client.send_message(member, "-------------------------------------------------------------------")
+    await client.send_message(member, "BELANGRIJK: Question: Wat moet ik doen als jullie bot offline is? A: 1.Koop een JBL boombox 2.Download TTS 3. voer in: ALARM ALARMM SNORWARE.EXE IS OFFLINEEEEEEE HELPPPPPPPP DE WERELD GAAT TEN EINDE AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH 3.klik op Play 4.Ren door je straat (indien mogelijk door de hele wereld) met je speaker en zet het volume op 100 (indien mogelijk 200)")
+    await client.send_message(member, "-------------------------------------------------------------------")
+    await client.send_message(member, "Bedankt voor het lezen en heb een fijne dag! (!fijne dag)")
 
 @client.event
 async def on_message(message):
+    if message.content.startswith('!wiet'):
+        await client.send_message(message.channel, "Je hebt wiet gerookt! :D (probeer het eens met peter R de vries)")
+    if message.content.startswith('!fijne dag'):
+        await client.send_message(message.channel, "Dankuwel! Namens Peter R de vries ook een fijne dag!") 
     if message.content.startswith('warn'):
         await client.send_message(message.channel,'Alright, Succesfully warned!')
     if(message.channel.id == "491253757141581825"):
