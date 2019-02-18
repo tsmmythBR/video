@@ -20,7 +20,7 @@ async def change_status():
     while not client.is_closed:
         current_status = next(msgs)
         await client.change_presence(game=discord.Game(name=current_status))
-        await asyncio.sleep(1)
+        await asyncio.sleep(10)
 
 
 @client.event
