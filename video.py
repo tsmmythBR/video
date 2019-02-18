@@ -119,7 +119,7 @@ async def on_message(message):
        await client.delete_message(message)
     if ('KANKER') in message.content:
        await client.delete_message(message)
-    if message.content.upper().startswith('say'):
+    if message.content.upper().startswith('!SAY'):
         if message.author.id == "457852154724483083":
             args = message.contect.split(" ")
             await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
