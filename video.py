@@ -89,8 +89,8 @@ async def on_message(message):
        await client.delete_message(message)  
     if ('ever1 yan') in message.content:
        await client.delete_message(message)
-    if message.content == 'versie':
-        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.4.2-BETA')
+    if message.content == 'v':
+        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.5')
     if message.content == 'wtf':
         await client.send_message(message.channel,'let op je taal!')
     if message.content == 'KKR':
