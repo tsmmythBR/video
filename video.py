@@ -20,6 +20,8 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    if(message.channel.id == "491228753268310018"):
+        await client.add_reaction(message, ":Safe:546989214932140032")
     if message.content == 'help':
         em = discord.Embed(description='Commands: !yesno, !coinflip, !friend, !8ball, ever1')
         em.set_image(url='https://discordapp.com/assets/ba74954dde74ff40a32ff58069e78c36.png')
