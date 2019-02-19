@@ -63,6 +63,7 @@ async def on_message(message):
         await client.send_message(message.channel, embed=em)
     if message.content.startswith('!yesno'):
         randomlist = ['Yes','No']
+        await client.send_message(message.channel,(random.choice(randomlist)))
     if message.content.startswith('!fnloc'):
         randomlist = ['Junk Junction','Lazy links','the block','haunted hills','pleasant park','loot lake','tomato temple','wailing woods','snobby shores','tilted towers','dusty divot','retail row','lonely lodge','shifty shafts','salty springs','frosty','polar','fatal fields','paradise palms','happy hamlet','lucky landing']
         await client.send_message(message.channel,(random.choice(randomlist)))
