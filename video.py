@@ -130,7 +130,7 @@ async def on_message(message):
         await client.send_message(message.channel,'let op je taal!')
     if message.content == 'KANKER':
         await client.send_message(message.channel,'let op je taal!')
-    if ('wtf') in message.content:
+    if ('wtf') in message.content.upper():
        await client.delete_message(message)
     if ('kut') in message.content:
        await client.delete_message(message)
