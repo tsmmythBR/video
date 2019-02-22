@@ -132,9 +132,9 @@ async def on_message(message):
         await client.send_message(message.channel,'let op je taal!')
     if ('wtf') in message.content:
        await client.delete_message(message)
-    if ('gast') in message.content:
+    if ('kut') in message.content:
        await client.delete_message(message)
-    if ('gozer') in message.content:
+    if ('kud') in message.content:
        await client.delete_message(message)
     if ('ping') in message.content:
        await client.delete_message(message)
