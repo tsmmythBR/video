@@ -11,7 +11,7 @@ from itertools import cycle
 Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
-status = ['SnorWare V0.9', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 19:47 25-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'gebruik eens !fnloc of !jn :D', 'Nieuws: De bot is nu 100% nederlands. :D (Idee: @matthijs0409)']
+status = ['SnorWare V0.9.1', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 19:47 25-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'gebruik eens !fnloc of !jn :D', 'Nieuws: De bot is nu 100% nederlands. :D (Idee: @matthijs0409)']
 
 async def change_status():
     await client.wait_until_ready()
@@ -58,14 +58,14 @@ async def on_message(message):
     if(message.channel.id == "491253757141581825"):
         await client.add_reaction(message, ":Safe:546989214932140032")
     if message.content == 'help':
-        em = discord.Embed(description='Commands: !fnloc !jn, !kopmunt, !vriend, !8ball, !wiet, !jnm, !gevaarlijk')
+        em = discord.Embed(description='Commands: !fnloc !jn, !km, !vriend, !8ball, !wiet, !wd, !gevaarlijk')
         em.set_image(url='https://discordapp.com/assets/ba74954dde74ff40a32ff58069e78c36.png')
         await client.send_message(message.channel, embed=em)
     if message.content.startswith('!jn'):
         randomlist = ['Ja','Nee']
         await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content.startswith('!jnm'):
-        randomlist = ['Ja','Nee','Misschien']
+    if message.content.startswith('!wd'):
+        randomlist = ['Eten','Vieze dingen kijken','Youtube kijken','winkelen','gamen','slapen','Privé dingen','afspreken','Suicide Kermitten']
         await client.send_message(message.channel,(random.choice(randomlist)))
     if message.content.startswith('!fnloc'):
         randomlist = ['Junk Junction','Lazy links','the block','haunted hills','pleasant park','loot lake','tomato temple','wailing woods','snobby shores','tilted towers','dusty divot','retail row','lonely lodge','shifty shafts','salty springs','frosty','polar','fatal fields','paradise palms','happy hamlet','lucky landing']
@@ -121,7 +121,7 @@ async def on_message(message):
     if ('ever1 yan') in message.content:
        await client.delete_message(message)
     if message.content == 'v':
-        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.9             Bijna V1.0!')
+        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.9.1                                                                                                                                                 Bijna V1.0!')
     if message.content.upper() == 'WTF':
         await client.send_message(message.channel,'let op je taal!')
     if message.content.upper() == 'KUT':
