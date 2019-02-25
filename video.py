@@ -11,7 +11,7 @@ from itertools import cycle
 Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
-status = ['SnorWare V0.9.1', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 19:47 25-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'gebruik eens !fnloc of !jn :D', 'Nieuws: De bot is nu 100% nederlands. :D (Idee: @matthijs0409)']
+status = ['SnorWare V0.9.1.1', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 19:47 25-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'gebruik eens !fnloc of !jn :D', 'Nieuws: De bot is nu 100% nederlands. :D (Idee: @matthijs0409)']
 
 async def change_status():
     await client.wait_until_ready()
@@ -25,7 +25,7 @@ async def change_status():
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='SnorWare V0.5', type = 2))
+    await client.change_presence(game=Game(name='SnorWare Update... (over enkele seconden is er een nieuwe versie!)', type = 2))
     print('snorbot is ready :)')
     
 @client.event
@@ -121,7 +121,7 @@ async def on_message(message):
     if ('ever1 yan') in message.content:
        await client.delete_message(message)
     if message.content == 'v':
-        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.9.1                                                                                                                                                 Bijna V1.0!')
+        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.9.1.1                                                                                                                                                 Bijna V1.0!')
     if message.content.upper() == 'WTF':
         await client.send_message(message.channel,'let op je taal!')
     if message.content.upper() == 'KUT':
