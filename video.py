@@ -11,7 +11,7 @@ from itertools import cycle
 Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
-status = ['SnorWare V0.8', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 14:47 18-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'gebruik eens !fnloc of !yesno :D', 'Season 8 start op donderdag 28 feb 2019']
+status = ['SnorWare V0.9', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 19:47 25-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'gebruik eens !fnloc of !jn :D', 'Nieuws: De bot is nu 100% nederlands. :D (Idee: @matthijs0409)']
 
 async def change_status():
     await client.wait_until_ready()
@@ -58,28 +58,28 @@ async def on_message(message):
     if(message.channel.id == "491253757141581825"):
         await client.add_reaction(message, ":Safe:546989214932140032")
     if message.content == 'help':
-        em = discord.Embed(description='Commands: !fnloc !yesno, !coinflip, !friend, !8ball, !wiet, !ynp, !dangerous')
+        em = discord.Embed(description='Commands: !fnloc !jn, !kopmunt, !vriend, !8ball, !wiet, !jnm, !gevaarlijk')
         em.set_image(url='https://discordapp.com/assets/ba74954dde74ff40a32ff58069e78c36.png')
         await client.send_message(message.channel, embed=em)
-    if message.content.startswith('!yesno'):
-        randomlist = ['Yes','No']
+    if message.content.startswith('!jn'):
+        randomlist = ['Ja','Nee']
         await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content.startswith('!ynp'):
-        randomlist = ['Yes','No','Perhaps']
+    if message.content.startswith('!jnm'):
+        randomlist = ['Ja','Nee','Misschien']
         await client.send_message(message.channel,(random.choice(randomlist)))
     if message.content.startswith('!fnloc'):
         randomlist = ['Junk Junction','Lazy links','the block','haunted hills','pleasant park','loot lake','tomato temple','wailing woods','snobby shores','tilted towers','dusty divot','retail row','lonely lodge','shifty shafts','salty springs','frosty','polar','fatal fields','paradise palms','happy hamlet','lucky landing']
         await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content.startswith('!coinflip'):
-        randomlist = ['head','coin']
+    if message.content.startswith('!km'):
+        randomlist = ['kop','munt']
         await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content.startswith('!friend'):
+    if message.content.startswith('!vriend'):
         randomlist = ['10%','20%','30%','40%','50%','60%','70%','80%','90%','100%']
         await client.send_message(message.channel,(random.choice(randomlist)))
     if message.content.startswith('!8ball'):
-        randomlist = ['Yes','No','sure','Nope','wtf','WAHAHA NOPE']
+        randomlist = ['Ja','Nee','sure','Nope','wtf','WAHAHA NOPE']
         await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content.startswith('!dangerous'):
+    if message.content.startswith('!gevaarlijk'):
         randomlist = ['Yes','No']
         await client.send_message(message.channel,(random.choice(randomlist)))
     if message.content == 'snor':
@@ -91,8 +91,8 @@ async def on_message(message):
         em.set_image(url='https://cdn.discordapp.com/attachments/491228753268310018/539507413766635521/schaap.jpg')
         await client.send_message(message.channel, embed=em)
     if message.content == 'yannick':
-        em = discord.Embed(description='hier heb je een foto van een skipper... hij is erg gay')
-        em.set_image(url='https://media.discordapp.net/attachments/491228753268310018/539507547569258496/865db2d7-cddc-4ab2-8f29-e41fe87b74d3-1526542591593.png?width=968&height=403')
+        em = discord.Embed(description='hier heb je een foto van een guy met een youtube kanaal. hij is erg gay en heeft een dakreparatie bedrijf...')
+        em.set_image(url='https://www.dgvservices.nl/wp-content/uploads/2015/08/Logo-DGV.png')
         await client.send_message(message.channel, embed=em)
     if message.content == 'pls 4k':
         em = discord.Embed(description='Je hebt geen toegang tot deze command. De fbi is onderweg...')
@@ -121,34 +121,34 @@ async def on_message(message):
     if ('ever1 yan') in message.content:
        await client.delete_message(message)
     if message.content == 'v':
-        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.8')
-    if message.content.upper() == 'wtf':
+        await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.9             Bijna V1.0!')
+    if message.content.upper() == 'WTF':
         await client.send_message(message.channel,'let op je taal!')
-    if message.content == 'KKR':
+    if message.content.upper() == 'KUT':
         await client.send_message(message.channel,'let op je taal!')
-    if message.content == 'kkr':
+    if message.content.upper() == 'KUD':
         await client.send_message(message.channel,'let op je taal!')
-    if message.content == 'ping':
+    if message.content.upper() == 'TYFUS':
         await client.send_message(message.channel,'let op je taal!')
-    if message.content == 'PING':
+    if message.content.upper() == 'PING':
         await client.send_message(message.channel,'let op je taal!')
-    if message.content == 'kanker':
+    if message.content.upper() == 'KKR':
         await client.send_message(message.channel,'let op je taal!')
-    if message.content == 'KANKER':
+    if message.content.upper() == 'KANKER':
         await client.send_message(message.channel,'let op je taal!')
     if ('WTF') in message.content.upper():
        await client.delete_message(message)
-    if ('kut') in message.content:
+    if ('KUT') in message.content.upper():
        await client.delete_message(message)
-    if ('kud') in message.content:
+    if ('KUD') in message.content.upper():
        await client.delete_message(message)
-    if ('ping') in message.content:
+    if ('TYFUS') in message.content.upper():
        await client.delete_message(message)
-    if ('PING') in message.content:
+    if ('PING') in message.content.upper():
        await client.delete_message(message)
-    if ('kanker') in message.content:
+    if ('KKR') in message.content.upper():
        await client.delete_message(message)
-    if ('KANKER') in message.content:
+    if ('KANKER') in message.content.upper():
        await client.delete_message(message)
     if message.content.upper().startswith('!SAY'):
         if "547024431504162839" in [role.id for role in message.author.roles]:
