@@ -55,7 +55,7 @@ async def on_message(message):
         await client.send_message(message.channel, "Dankuwel! Namens Peter R de vries ook een fijne dag!") 
     if message.content.startswith('warn'):
         await client.send_message(message.channel,'Alright, Succesfully warned!')
-    if(message.channel.id == "491253757141581825"):
+    if(message.channel.id == "5345353455345345"):
         await client.add_reaction(message, ":Safe:546989214932140032")
     if message.content == 'help':
         em = discord.Embed(description='Commands: !fnloc !jn, !km, !vriend, !8ball, !wiet, !wd, !gevaarlijk')
