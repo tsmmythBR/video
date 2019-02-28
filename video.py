@@ -80,6 +80,9 @@ async def on_message(message):
     if message.content.startswith('!vriend'):
         randomlist = ['10%','20%','30%','40%','50%','60%','70%','80%','90%','100%']
         await client.send_message(message.channel,(random.choice(randomlist)))
+    if message.content.startswith('!hoelang'):
+        randomlist = ['1 minuut','15 minuten','1 uur','2 uur','5 uur','10 uur','12 uur','23 uur en 59 minuten','30 seconden','45 minuten']
+        await client.send_message(message.channel,(random.choice(randomlist)))
     if message.content.startswith('!8ball'):
         randomlist = ['Ja','Nee','sure','Nope','wtf','WAHAHA NOPE']
         await client.send_message(message.channel,(random.choice(randomlist)))
