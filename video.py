@@ -147,7 +147,7 @@ async def on_message(message):
        await client.delete_message(message)
     if ('KUT') in message.content.upper():
        await client.delete_message(message)
-    if ('KUD') in message.content.upper():
+    if ('PAGGA') in message.content.upper():
        await client.delete_message(message)
     if ('TYFUS') in message.content.upper():
        await client.delete_message(message)
