@@ -131,9 +131,9 @@ async def on_message(message):
         await client.send_message(message.channel,'Ik draai op dit moment op SnorWare V0.9.1.1                                                                                                                                                 Bijna V1.0!')
     if message.content.upper() == 'WTF':
         await client.send_message(message.channel,'let op je taal!')
-    if message.content.upper() == 'KUT':
+    if message.content.upper() == 'PAGA':
         await client.send_message(message.channel,'let op je taal!')
-    if message.content.upper() == 'KUD':
+    if message.content.upper() == 'PAGGS':
         await client.send_message(message.channel,'let op je taal!')
     if message.content.upper() == 'TYFUS':
         await client.send_message(message.channel,'let op je taal!')
