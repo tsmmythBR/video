@@ -11,7 +11,7 @@ from itertools import cycle
 Client = discord.client
 client = commands.Bot(command_prefix = '!')
 Clientdiscord = discord.Client()
-status = ['SnorWare V1.0', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 19:47 25-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'gebruik eens !fnloc of !jn :D', 'Nieuws: De bot is nu 100% nederlands. :D (Idee: @matthijs0409)']
+status = ['SnorWare V1.1', 'Gemaakt door Peter R. de Vries#2938', 'DM mij als je een bot wilt', 'Laatste onderhoud: 19:47 25-2-2019', 'Inviten? Stuur Peter R. de Vries#2938 een dm!', 'Ik rook wiet als peter r de vries...', 'gebruik eens !fnloc of !jn :D', 'Nieuws: De bot is nu 100% nederlands. :D (Idee: @matthijs0409)']
 
 async def change_status():
     await client.wait_until_ready()
@@ -54,7 +54,7 @@ async def on_message(message):
     if message.content.startswith('!ks'):
         await client.send_message(message.channel, "Je hebt suicide gekermit :D (probeer het eens samen met Kermit!)")
     if message.content.startswith('!up35534535352345'):
-        await client.send_message(message.channel, "DE V1.0 UPDATE IS ONLINE! EINDELIJK IS DE BOT UIT DE BETA TEST. :D WIJ WENSEN U VEEL PLEZIER MET ONZE BOT. :D")
+        await client.send_message(message.channel, "DE V1.1 UPDATE IS ONLINE!")
     if message.content.startswith('!fijne dag'):
         await client.send_message(message.channel, "Dankuwel! Namens Peter R de vries ook een fijne dag!") 
     if message.content.startswith('warn'):
@@ -145,11 +145,11 @@ async def on_message(message):
         await client.send_message(message.channel,'let op je taal!')
     if ('WTF') in message.content.upper():
        await client.delete_message(message)
-    if ('KUT') in message.content.upper():
+    if ('PAG') in message.content.upper():
        await client.delete_message(message)
     if ('PAGGA') in message.content.upper():
        await client.delete_message(message)
-    if ('TYFUS') in message.content.upper():
+    if ('PAGA') in message.content.upper():
        await client.delete_message(message)
     if ('!up35534535352345') in message.content.upper():
        await client.delete_message(message)
